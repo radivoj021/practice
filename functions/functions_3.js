@@ -176,24 +176,37 @@ var search = search(txt, l);
 console.log(search);
  */
 
-var txt = "Big fox is faster than a small fox";
-var wrd = "fox";
+/* 9. Write a function to hide email address.
+"myemailaddress@bgit.rs" -> "mye...@bgit.rs" */
 
-var y = 0;
+/* function protect(email) {
+  var avg, splitted, part1, part2;
+  splitted = email.split("@");
+  part1 = splitted[0];
+  avg = part1.length / 2;
+  part1 = part1.substring(0, part1.length - avg);
+  part2 = splitted[1];
 
-function count(text, word) {
-  var res = "";
-  for (var i = 0; i < text.length; i++) {
-    if (text[i] == word[0]) {
-      for (var j = i; j < word.length + i; j++) {
-        if (text[j] == word[j - i]) {
-          y++;
-        }
-      }
-    }
-  }
-  return y;
+  return part1 + "...@" + part2;
 }
 
-var count = count(txt, wrd);
-console.log(count);
+var protect = protect("rapic.021@gmail.com");
+console.log(protect);
+ */
+
+/* 10. Write a program to find the most frequent item of an array.
+[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]
+ */
+/* [3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3] */
+
+var array = ["a", "s", "d", "f", "g", "a"];
+var m = 0;
+for (var i = 0; i < array.length; i++) {
+  for (var j = i; j < array.length; j++) {
+    if (array[i] === array[j]) {
+      m++;
+    }
+  }
+}
+
+console.log(m);
